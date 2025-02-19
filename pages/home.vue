@@ -34,7 +34,7 @@ watch(searchText, () => {
 </script>
 
 <template>
-    <div class="h-screen flex border-gradient rounded-3xl" style="width: calc(100% - 270px);">
+    <div class="h-screen flex border-gradient rounded-[40px]" style="width: calc(100% - 270px);">
         <div class="w-full h-screen bg-black rounded-l-[40px] p-6">
             <div class="w-full h-[47.43px] flex text-base text-[rgba(255,255,255,0.4)]">
                 <div class="w-full h-full p-3 rounded-3xl border flex gap-[10px] border-[rgba(255,255,255,0.2)]">
