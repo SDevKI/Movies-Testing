@@ -56,8 +56,8 @@ watch(searchText, () => {
             <div class="w-full overflow-auto rounded-3xl" v-if="searchText == ''" style="height: calc(100% - 47.43px);">
 
                 <div class="w-full overflow-hidden mb-3">
-                    <swiper :slides-per-view="1.8" :free-mode="true" :breakpoints="{768:{slidesPerView: 5.19,freeMode:true}}" :space-between="10" @swiper="onSwiper"
-                        class="w-full h-[275px] md:h-[42.69vh]  text-3xl text-white" @slideChange="onSlideChange">
+                    <swiper :slides-per-view="1.8" :free-mode="true" :breakpoints="{768:{slidesPerView:2.5,freeMode:true},1200:{slidesPerView: 5.19,freeMode:true}}" :space-between="10" @swiper="onSwiper"
+                        class="w-full h-[275px] md:h-[42.69vh] text-3xl text-white" @slideChange="onSlideChange">
                         <swiper-slide v-for="(item, index) in data" :key="index" class="rounded-3xl overflow-hidden">
                             <img :src="item.poster" alt="" class="w-full h-full object-cover">
                         </swiper-slide>
@@ -65,7 +65,7 @@ watch(searchText, () => {
                 </div>
                 <div class="w-full h-[165px] overflow-hidden">
                     <h2 class="text-base text-white mb-2">Recenly watch</h2>
-                    <swiper :slides-per-view="2.3" free-mode :breakpoints="{768:{slidesPerView: 6.8}}" :space-between="10" @swiper="onSwiper"
+                    <swiper :slides-per-view="2.3" free-mode :breakpoints="{768:{slidesPerView: 4.5},1200:{slidesPerView: 6.8}}" :space-between="10" @swiper="onSwiper"
                         class="w-full h-[113px] md:h-[138px] text-3xl text-white" @slideChange="onSlideChange">
                         <swiper-slide v-for="(item, index) in data" :key="index"
                             class="rounded-[12px] overflow-hidden relative">
@@ -79,7 +79,7 @@ watch(searchText, () => {
                 </div>
                 <h2 class=" font-bold text-[23px] text-white mb-3">New coming</h2>
                 <div class="w-full overflow-hidden mb-3">
-                    <swiper :slides-per-view="2.3" free-mode :breakpoints="{768:{slidesPerView: 5.6}}" :space-between="10" @swiper="onSwiper"
+                    <swiper :slides-per-view="2.3" free-mode :breakpoints="{768:{slidesPerView: 4.2},1200:{slidesPerView: 5.6}}" :space-between="10" @swiper="onSwiper"
                         class="w-full text-3xl text-white" @slideChange="onSlideChange">
                         <swiper-slide v-for="(item, index) in data" :key="index">
                             <img :src="item.poster" alt="" class="w-full h-[96px] rounded-xl mb-2 object-cover">
@@ -105,7 +105,7 @@ watch(searchText, () => {
                 </div>
                 <h2 class=" font-bold text-[23px] text-white mb-3">Action</h2>
                 <div class="h-[236px] overflow-hidden mb-3">
-                    <swiper :slides-per-view="2.3" free-mode :space-between="10" :breakpoints="{768:{slidesPerView: 5.6}}" @swiper="onSwiper"
+                    <swiper :slides-per-view="2.3" free-mode :space-between="10" :breakpoints="{768:{slidesPerView: 4.2},1200:{slidesPerView: 5.6}}" @swiper="onSwiper"
                         class="w-full h-full text-3xl text-white" @slideChange="onSlideChange">
                         <swiper-slide v-for="(item, index) in data" :key="index"
                             class="rounded-[12px] overflow-hidden relative">
