@@ -12,9 +12,9 @@ function convertSeconds(seconds) {
 
 <template>
     <BackgroundEfffect>
-        <div class="w-full h-full overflow-auto">
+        <div class="w-full h-full overflow-auto rounded-3xl">
 
-            <div class=" flex flex-col gap-2">
+            <div class=" flex flex-col gap-2 ">
                 <div class="flex items-center px-3">
                     <img src="/assets/bookmark.svg" class="size-6 mr-3" alt="">
                     <h1 class="font-bold text-[23px] ">Favorite</h1>
