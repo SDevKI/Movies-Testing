@@ -4,8 +4,9 @@
 </script>
 
 <template>
-    <div class="w-full h-screen border-gradient rounded-l-[40px]">
-        <div class="w-full h-screen bg-black rounded-l-[40px] text-white p-6 flex flex-col gap-[10px]">
+    <BackgroundEfffect>
+        <div class=" flex flex-col gap-2">
+
             <div class="flex items-center px-3">
                 <img src="/assets/live.svg" class="size-6 mr-3" alt="">
                 <h1 class="font-bold text-[23px] ">Live now</h1>
@@ -34,7 +35,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </BackgroundEfffect>
+
 </template>
 
 <style>

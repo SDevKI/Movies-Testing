@@ -11,8 +11,9 @@ function convertSeconds(seconds) {
 </script>
 
 <template>
-    <div class="w-full h-screen border-gradient rounded-3xl text-white">
-        <div class="w-full h-screen bg-black rounded-l-[40px] p-6 flex flex-col gap-[10px]">
+  <BackgroundEfffect>
+        <div class=" flex flex-col gap-3">
+
             <div class="flex items-center px-3">
                 <img src="/assets/bookmark.svg" class="size-6 mr-3" alt="">
                 <h1 class="font-bold text-[23px] ">Favorite</h1>
@@ -27,7 +28,7 @@ function convertSeconds(seconds) {
                         </div>
                         <div v-else class="flex">
                             <img src="/assets/full-star.png" alt="" class="size-[13px]"
-                                v-for="n in (item.rating - 1) / 2">
+                            v-for="n in (item.rating - 1) / 2">
                             <img src="/assets/star-half.png" alt="" class="size-[13px]">
                         </div>
                         <div class="text-[8px] opacity-60">length : {{ convertSeconds(item.duration) }}</div>
@@ -37,30 +38,13 @@ function convertSeconds(seconds) {
                         </div>
                     </div>
                 </div>
-
+                
             </div>
-        </div>
-    </div>
+      </div>
+
+  </BackgroundEfffect>
 </template>
 
 <style>
-.border-gradient {
-    box-shadow: 0 0 70px #ff6a00;
-    position: relative;
-}
 
-.border-gradient::after {
-    content: "";
-    width: calc(100% + 6px);
-    height: calc(100% + 6px);
-    padding: 3px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    border-radius: 40px;
-    position: absolute;
-    background: linear-gradient(180deg, rgba(255, 183, 0, 1) 0%, rgba(157, 100, 0, 1) 100%);
-
-}
 </style>

@@ -35,7 +35,7 @@ function setActive(name) {
 </script>
 
 <template>
-    <div class="min-w-[270px] px-6 py-2 flex flex-col gap-3">
+    <div class="min-w-[270px] md:flex px-6 py-2 hidden flex-col gap-3">
         <div class="flex items-center">
             <img src="/assets/logo.png" alt="" class="w-[142px] h-[53.2px]">
             <img src="/assets/bell.png" class="ml-auto w-6 h-6 cursor-pointer" alt=""  @click="router.push({name:'notification'})">
@@ -55,6 +55,20 @@ function setActive(name) {
             <img src="/assets/bookmark.svg" alt="" class="w-8 h-8 " :class="active[2].active ? 'filterBG' : ''">
             <h2 class="duration-300 transition-all">Favorite</h2>
         </NuxtLink>
+    </div>
+    <div class="w-full h-full flex flex-col gap-8 py-8 md:hidden">
+        <div class="flex justify-between px-2">
+            <img src="/assets/logo.png" alt="" class="w-[142px] h-[53.2px]">
+            <img src="/assets/bell.png" class="ml-auto w-6 h-6 cursor-pointer" alt=""  @click="router.push({name:'notification'})">
+        </div>
+        <slot> 
+
+        </slot>
+        <div class="flex justify-between w-full">
+            <img src="/assets/home.svg" alt="" class="w-8 h-8 " :class="active[0].active ? 'filterBG' : ''">
+            <img src="/assets/live.svg" alt="" class="w-8 h-8 " :class="active[1].active ? 'filterBG' : ''">
+            <img src="/assets/bookmark.svg" alt="" class="w-8 h-8 " :class="active[2].active ? 'filterBG' : ''">
+        </div>
     </div>
 </template>
 

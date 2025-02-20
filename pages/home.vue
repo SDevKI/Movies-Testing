@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 // Import Swiper styles
 import 'swiper/css';
 import data from '@/public/movies.json'
+import BackgroundEfffect from '~/components/BackgroundEfffect.vue';
 
 const searchText = ref("")
 
@@ -34,8 +35,8 @@ watch(searchText, () => {
 </script>
 
 <template>
-    <div class="h-screen flex border-gradient rounded-[40px]" style="width: calc(100% - 270px);">
-        <div class="w-full h-screen bg-black rounded-l-[40px] p-6">
+    <BackgroundEfffect>
+        <div class=" flex flex-col gap-2 h-full" >
             <div class="w-full h-[47.43px] flex text-base text-[rgba(255,255,255,0.4)]">
                 <div class="w-full h-full p-3 rounded-3xl border flex gap-[10px] border-[rgba(255,255,255,0.2)]">
                     <img src="/assets/Search.png" alt="" class="size-[23.43px]">
@@ -110,12 +111,13 @@ watch(searchText, () => {
             <div class="w-full h-full" v-else>
                 <h2 class=" font-bold text-[23px] text-white mb-3">"{{ searchText }}" search result</h2>
                 <div class="w-full flex gap-3 flex-wrap">
-                    <div class="w-[275px] h-[224px] mb-3" v-for="(item,index) in searchTitle" :key="index">
+                    <div class="w-[275px] h-[224px] mb-3" v-for="(item, index) in searchTitle" :key="index">
                         <img :src="item.poster" alt="" class="w-full h-[162px] rounded-xl mb-2 object-cover">
                         <div class="flex flex-col text-white text-base">
                             <h3>{{ item.title }}</h3>
                             <div v-if="item.rating % 2 == 0" class="flex">
-                                <img src="/assets/full-star.png" alt="" class="size-[13px]" v-for="n in item.rating / 2">
+                                <img src="/assets/full-star.png" alt="" class="size-[13px]"
+                                    v-for="n in item.rating / 2">
                             </div>
                             <div v-else class="flex">
                                 <img src="/assets/full-star.png" alt="" class="size-[13px]"
@@ -124,7 +126,7 @@ watch(searchText, () => {
                             </div>
                             <div class="text-[8px] opacity-60">length : {{ convertSeconds(item.duration) }}</div>
                             <div class="flex items-center">
-                                <img src="/assets/volume.png" class="size-3 mr-1 object-cover"  alt="">
+                                <img src="/assets/volume.png" class="size-3 mr-1 object-cover" alt="">
                                 <h4 class="text-[12px] opacity-60">EN /TH</h4>
                             </div>
                         </div>
@@ -133,27 +135,7 @@ watch(searchText, () => {
                 </div>
             </div>
         </div>
-    </div>
+    </BackgroundEfffect>
 </template>
 
-<style scoped>
-.border-gradient {
-    box-shadow: 0 0 70px #ff6a00;
-    position: relative;
-}
-
-.border-gradient::after {
-    content: "";
-    width: calc(100% + 6px);
-    height: calc(100% + 6px);
-    padding: 3px;
-    left: calc(50%);
-    top: 50%;
-    transform: translate(calc(-50%), -50%);
-    z-index: -1;
-    border-radius: 40px;
-    position: absolute;
-    background: linear-gradient(180deg, rgba(255, 183, 0, 1) 0%, rgba(157, 100, 0, 1) 100%);
-
-}
-</style>
+<style scoped></style>
