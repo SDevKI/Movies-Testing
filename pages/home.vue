@@ -2,11 +2,17 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 // Import Swiper styles
 import 'swiper/css';
-import data from '@/public/movies.json'
+import { useMovieStore } from '#imports';
 import BackgroundEfffect from '~/components/BackgroundEfffect.vue';
 
-const searchText = ref("")
 
+//state
+const searchText = ref("")
+const movieStore = useMovieStore()
+const data = movieStore.data
+
+
+//function
 const onSlideChange = () => {
     console.log('slide change');
 
@@ -100,7 +106,7 @@ watch(searchText, () => {
                 <h2 class=" font-bold text-[23px] text-white mb-3">Action</h2>
                 <div class="h-[236px] overflow-hidden mb-3">
                     <swiper :slides-per-view="2.3" free-mode :space-between="10" :breakpoints="{768:{slidesPerView: 5.6}}" @swiper="onSwiper"
-                        class="w-[83.75vw] h-full text-3xl text-white" @slideChange="onSlideChange">
+                        class="w-full h-full text-3xl text-white" @slideChange="onSlideChange">
                         <swiper-slide v-for="(item, index) in data" :key="index"
                             class="rounded-[12px] overflow-hidden relative">
                             <img :src="item.poster" alt="" class="w-full h-full object-cover">

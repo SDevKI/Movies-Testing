@@ -1,6 +1,12 @@
 <script setup>
+import { useMovieStore } from './stores/MovieStore';
 const route = useRoute()
+const movieStore = useMovieStore()
+//onBeforeMounted
 
+onBeforeMount(()=>{
+    movieStore.fetchData();
+})
 
 </script>
 
