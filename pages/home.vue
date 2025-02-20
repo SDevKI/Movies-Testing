@@ -44,9 +44,9 @@ watch(searchText, () => {
     <BackgroundEfffect>
         <div class=" flex flex-col gap-2 h-full">
             <div class="w-full h-[47.43px] flex text-base text-[rgba(255,255,255,0.4)]">
-                <div class="w-full h-full p-3 rounded-3xl border flex gap-[10px] border-[rgba(255,255,255,0.2)]">
+                <div class="w-full h-full p-3 hover:border-white rounded-3xl border flex gap-[10px] border-[rgba(255,255,255,0.2)]">
                     <img src="/assets/Search.png" alt="" class="size-[23.43px]">
-                    <input type="text" v-model="searchText" placeholder="Search movie" class="w-full">
+                    <input type="text" v-model="searchText" placeholder="Search movie" class="focus:text-white  w-full outline-0">
                 </div>
                 <div class="flex justify-center items-center gap-[2px] w-[90px] h-full">
                     <img src="/assets/filter.png" alt="" class=" size-6">
