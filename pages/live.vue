@@ -11,7 +11,7 @@
                 <img src="/assets/live.svg" class="size-6 mr-3" alt="">
                 <h1 class="font-bold text-[23px] ">Live now</h1>
             </div>
-            <div class="w-full h-auto flex flex-wrap gap-3">
+            <div class="w-full h-auto flex flex-wrap gap-2">
                 <div>
                     <div
                         class="w-[164px] h-[103px] flex justify-center items-center  border border-[rgba(255,255,255,0.4)] rounded-xl">

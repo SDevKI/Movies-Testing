@@ -13,12 +13,12 @@
                 <div class="flex w-full h-[177px] gap-3">
                     <img src="/assets/poster.png" class="w-[130px] h-[177px] rounded-xl" alt="">
                     <div class="w-full h-full flex flex-col">
-                        <p class="text-[13px] mb-auto opacity-80">Lorem ipsum dolor sit amet consectetur adipisicing
+                        <p class="text-[13px] h-[131px] overflow-auto mb-auto opacity-80">Lorem ipsum dolor sit amet consectetur adipisicing
                             elit.
                             Cum facere nam tenetur pariatur, sit harum excepturi voluptatem consequuntur autem eaque
                             nihil
                             sed velit cupiditate repellendus numquam laudantium id soluta aliquam.</p>
-                        <button class="w-full flex h-[34px] gap-2 justify-center items-center rounded-xl bg-[#9d6400]">
+                        <button class="w-full flex h-[34px] mt-2 gap-2 justify-center items-center rounded-xl bg-[#9d6400]">
                             <img src="/assets/play.png" class="size-[18px]" alt="">
                             <h3>watch now</h3>
                         </button>

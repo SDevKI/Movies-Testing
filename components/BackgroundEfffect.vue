@@ -1,6 +1,6 @@
 <template>
-    <div class="h-screen flex border-gradient rounded-[40px]" style="width: calc(100% - 270px);">
-        <div class="w-full h-screen bg-black rounded-l-[40px] text-white p-6">
+    <div class="md:h-screen h-[calc(100%-140px)] flex border-gradient rounded-[40px] md:w-[calc(100%-270px)] w-full">
+        <div class="w-full h-full bg-black rounded-[40px] md:rounded-r-none text-white p-3 md:p-6">
             <slot>
 
             </slot>
@@ -9,6 +9,7 @@
 </template>
 
 <style scoped>
+
 .border-gradient {
     box-shadow: 0 0 70px #ff6a00;
     position: relative;
